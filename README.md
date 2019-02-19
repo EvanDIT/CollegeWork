@@ -23,12 +23,17 @@ Resources
 - Week 12 Assignment Submission - 30%
 - End of Year exam - 50%
 
+# Week 4 - Arrays
+- [Arrays](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+
+Checak out [Arrays.java](https://github.com/skooter500/OOP-2018-2019/blob/master/java/src/ie/dit/Arrays.java) for the program we wrote in the class today
+
 # Week 3 - Using Loops in Java
 - [For loop](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
 - [While loop](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
 - [Foreach loop](https://docs.oracle.com/javase/8/docs/technotes/guides/language/foreach.html)
 
-Check out the class Loops class in the repo for some examples
+Check out [Loops.java](https://github.com/skooter500/OOP-2018-2019/blob/master/java/src/ie/dit/Loops.java) in the repo for some examples
 
 ## Lab
 
@@ -86,6 +91,9 @@ for loops are probably a better choice for most of these, but you should try wri
 
 - Check out the HelloProcessing class in the repo
 - We drew the all seeing eye using the Processing drawing methods
+
+![](https://github.com/skooter500/GP-2016-2017/blob/master/images/p1.2.png?raw=true)
+
 
 ## Learning Outcomes
 - Practice drawing stuff and working out co-ordinates

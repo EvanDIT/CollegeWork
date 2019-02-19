@@ -21,10 +21,18 @@ public class Main
         processing.core.PApplet.runSketch( a, new Loops());
 		
 	}
+<<<<<<< HEAD
 	public void arrays()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Arrays ());
+=======
+	
+	public void arrays()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Arrays());
+>>>>>>> 47d8d86aa6f6036695344738d1d03079962dd992
 		
 	}
 
