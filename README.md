@@ -26,7 +26,57 @@ Resources
 # Week 4 - Arrays
 - [Arrays](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
-Checak out [Arrays.java](https://github.com/skooter500/OOP-2018-2019/blob/master/java/src/ie/dit/Arrays.java) for the program we wrote in the class today
+Check out [Arrays.java](https://github.com/skooter500/OOP-2018-2019/blob/master/java/src/ie/dit/Arrays.java) for the program we wrote in the class today
+
+## Lab
+
+### Learning Outcomes
+- Know to to declare and assign values to an array
+- Know how to iterate over an array
+- Practice problem solving with arrays
+
+Clone the repo for the course if you need it or switch to the master branch and pull the changes to get the Arrays example. Create a new branch for your work today called lab4
+
+### Task 1
+
+Modify the class Arrays.java to draw this trend line graph. You should probably add a method to do this and call it from draw()
+
+![Sketch](images/p7.png)
+
+- You might find the following Processing methods useful:
+  - [line](https://processing.org/reference/line_.html)
+  - [The Processing map method](https://processing.org/reference/map_.html)
+  - [text](https://processing.org/reference/text_.html) - Prints text to the screen at x and y coordinates
+  - [textAlign](https://processing.org/reference/textAlign_.html)
+
+### Task 2
+
+These two arrays give the frequencies of music notes and the corresponding note name in a notation called ABC notation. The names of music notes are called "spellings".
+
+```Java
+float[] frequencies = {293.66f, 329.63f, 369.99f, 392.00f, 440.00f, 493.88f, 554.37f, 587.33f
+			, 659.25f, 739.99f, 783.99f, 880.00f, 987.77f, 1108.73f, 1174.66f};
+String[] spellings = {"D,", "E,", "F,", "G,", "A,", "B,", "C", "D", "E", "F", "G", "A", "B","c", "d", "e", "f", "g", "a", "b", "c'", "d'", "e'", "f'", "g'", "a'", "b'", "c''", "d''"};
+```
+
+-  Write a class called PitchSpeller that has the above 2 arrays as fields. It should have a method ```public String spell(float frequency)``` that takes a frequency as a parameter and returns the spelling which is *closest* to that frequency. Test your solution by adding code to the main method. For example:
+
+```Java
+PitchSpeller ps = new PitchSpeller();
+System.out.println(ps.spell(330));
+System.out.println(ps.spell(420));
+System.out.println(ps.spell(1980));
+```
+
+Should print:
+
+```
+E,
+A,
+b
+```
+
+You can use the ```Math.abs``` method in your solution to get the absolute value of a number.
 
 # Week 3 - Using Loops in Java
 - [For loop](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
