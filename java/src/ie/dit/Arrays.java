@@ -112,15 +112,60 @@ public class Arrays extends PApplet
         }       
     }
 
+    void lineGraph()
+    {
+        line(50, 50, 50, 450);
+        line(50, width - 50, width - 50, 450);
+        // Lines on the left hand side. 
+        float y = 50;
+        for (int i = 0; i < 15; i++)
+        {
+            line(50,y,25,y);
+            y = y + 28.6f;
+        }
+        // Numbers
+        int number = 0;
+        float g = 450f;
+        for(int i = 0; i < 16; i++)
+        {
+            text(number,5,g); // in length from x.
+            number = number + 10;
+            g = g - 26.5f;
+            fill (0);
+        }
+        
+        
+        
+        // Lines on the bottom. 
+         float x = 50;
+         for (int i = 0; i < 15; i++)
+         {
+             line(x,y,x,450);
+             x = x + 28.6f;
+         }
+
+        
+        //Letters on the bottom.
+
+        
+
+
+ 
+
+
+
+    }
+
     public void draw()
     {
-        background(0);
+        background(255);
+        lineGraph();
 
-        drawBarChart();
+      //  drawBarChart();
 
-        float gap = height / (float) rainFall.length;
-        int m = (int) Math.floor(mouseY / gap);
-        fill(255);
-        text(rainFall[m], 300, height / 2);
+        // float gap = height / (float) rainFall.length;
+        // int m = (int) Math.floor(mouseY / gap);
+        // fill(255);
+        // text(rainFall[m], 300, height / 2);
     }
 }
