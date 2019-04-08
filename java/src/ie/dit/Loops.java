@@ -1,7 +1,6 @@
 package ie.dit;
 
 import processing.core.PApplet;
-import java.util.Arrays;
 
 public class Loops extends PApplet
 {	
@@ -98,16 +97,16 @@ public class Loops extends PApplet
 		}
 	}
 
-	void problem1()
+	void problem1() // Lines going accross screen through the center.
 	{
-		int numLines = 20;
-		float gap = width / numLines;
+		int numLines = 20; // number of lines we wish to use.
+		float gap = width / numLines; // gap is width of screen divided by 20, the num of lines.
 
 		for(int l = 0 ; l <= numLines; l ++)
 		{
 			float x = l * gap;
-			line(x, 0, width - x, height);
-			line(0, x, width, height - x);
+			line(x, 0, width - x, height); //Lines on top of screen.
+			line(0, x, width, height - x); // Lines on sides of screen.
 			
 		}
 	}
@@ -206,6 +205,26 @@ public class Loops extends PApplet
 		}
 	}
 
+	void problem7()
+	{
+		background(0);
+		stroke(0,100,0);
+		int gridSize = 10;
+		float w = width / gridSize;		
+		// Nested loop
+		for(int i = 0 ; i < gridSize ; i ++)
+		{
+			for(int j = 0 ; j < gridSize ; j ++)
+			{
+				float x = i * w + w;
+				float y = j * w + w;
+
+				rect(x, y, w, w);
+			}
+		}
+	}
+	
+
 
 	public void draw()
 	{			
@@ -230,8 +249,5 @@ public class Loops extends PApplet
 		//problem2();
 		//problem3();
 		//problem4();
-		problem5();
-		//problem6();
 	}
-
 }

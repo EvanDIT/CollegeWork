@@ -112,80 +112,60 @@ public class Arrays extends PApplet
         }       
     }
 
-    void drawLineGraph()
+    void lineGraph()
     {
-        float gap = width * 0.1f;
-        stroke(255);
-        line(gap, gap, gap, height - gap);
-        line(gap, height - gap, width - gap, height - gap);
-
-        textAlign(CENTER, CENTER);
-        for (int i = 0 ; i < months.length ; i ++)
+        line(50, 50, 50, 450);
+        line(50, width - 50, width - 50, 450);
+        // Lines on the left hand side. 
+        float y = 50;
+        for (int i = 0; i < 15; i++)
         {
-            float x = map(i, 0, months.length - 1, gap, width - gap);
-            line(x, height - gap, x, height - gap + 5);
-            fill(255);
-            float ty = height - (gap / 2);
-            text(months[i], x, ty);
+            line(50,y,25,y);
+            y = y + 28.6f;
         }
-        for(int i = 0 ; i <= 150; i +=10)
+        // Numbers
+        int number = 0;
+        float g = 450f;
+        for(int i = 0; i < 16; i++)
         {
-            float y = map(i, 0, 150, height - gap, gap);
-            line(gap - 5, y, gap, y);
-            text(i, gap / 2, y);
+            text(number,5,g); // in length from x.
+            number = number + 10;
+            g = g - 26.5f;
+            fill (0);
         }
-        for(int i = 1 ; i < rainFall.length ; i ++)
-        {
-            float x1 = map(i - 1, 0, rainFall.length - 1, gap, width - gap); 
-            float y1 = map(rainFall[i - 1], 0, 150, height - gap, gap);
-            float x2 = map(i, 0, rainFall.length - 1, gap, width - gap); 
-            float y2 = map(rainFall[i], 0, 150, height - gap, gap);
-            line(x1, y1, x2, y2);            
-        }
-    }
+        
+        
+        
+        // Lines on the bottom. 
+         float x = 50;
+         for (int i = 0; i < 15; i++)
+         {
+             line(x,y,x,450);
+             x = x + 28.6f;
+         }
 
-    void drawPieChart()
-    {
-        float cx = width / 2;
-        float cy = height / 2;
+        
+        //Letters on the bottom.
 
-        float w = width * 0.8f;
-        //arc(cx, cy, w, w, 0, TWO_PI, ARC);
+        
 
-        float total = 0;
-        colorMode(HSB);
-        for (int i = 0 ; i < rainFall.length ; i ++)
-        {
-            total += rainFall[i];
-        }
 
-        float runningSum = 0;
-        for (int i = 0 ; i < rainFall.length ; i ++)
-        {
-            float next = runningSum + rainFall[i];
-            float start = map(runningSum, 0, total, 0, TWO_PI);
-            float end = map(next, 0, total, 0, TWO_PI);
-            fill(map(i, 0, rainFall.length, 0, 255), 255, 255);
-            arc(cx, cy, w, w, start, end, ARC);
-            runningSum = next;
-        }
+ 
+
+
 
     }
-
-
 
     public void draw()
     {
-        background(0);
+        background(255);
+        lineGraph();
 
-        //drawLineGraph();;
-        drawPieChart();
-        //drawBarChart();
+      //  drawBarChart();
 
-        /*float gap = height / (float) rainFall.length;
-        int m = (int) Math.floor(mouseY / gap);
-        fill(255);
-        text(rainFall[m], 300, height / 2);
-        */
+        // float gap = height / (float) rainFall.length;
+        // int m = (int) Math.floor(mouseY / gap);
+        // fill(255);
+        // text(rainFall[m], 300, height / 2);
     }
 }
